@@ -5,6 +5,16 @@
 header {
     background: url(./novas-project/assets/home.jpg);
     height: 100vh;
+    display: flex;
+
+    &.contact-header {
+        background: url(./novas-project/assets/contact.jpg)
+    }
+}
+
+/* Code I pulled from polar bear project to see what would help header.
+
+header {   
     padding-top: 50px;
     background-size: cover;
     background-repeat: no-repeat;
@@ -48,3 +58,4 @@ nav a:hover,
 nav a:focus {
     border: 4px solid white;
 }
+*/
