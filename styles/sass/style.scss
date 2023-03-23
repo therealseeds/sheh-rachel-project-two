@@ -1,18 +1,71 @@
-@use "setup";
-@use "variables" as v;
+@use "partials/setup";
+@use "partials/variables" as v;
 
 /*HEADER STYLES*/
 header {
-    background: url(./novas-project/assets/home.jpg);
+    background: url(../novas-project/assets/home.jpg);
     height: 100vh;
-    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &.contact-header {
-        background: url(./novas-project/assets/contact.jpg)
+        background: url(../novas-project/assets/contact.jpg);
+        background-repeat: no-repeat;
     }
 }
 
-/* Code I pulled from polar bear project to see what would help header.
+header .wrapper {
+    max-width: 1080px;
+    width: 90%;
+    margin: 0 auto;
+}  
+
+header .text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+nav,
+.featured-sale,
+footer  {
+    display: flex;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+} 
+
+h1 {
+    text-align: left;
+}
+
+h2 {
+    text-align: center;
+}
+
+.vertical-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(100% / 3);
+}
+
+.featured-sale {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(100% / 5);
+}
+
+.couches {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(100% / 2);
+}
+
+/* Code I pulled from polar bear project to see what would help header
 
 header {   
     padding-top: 50px;
