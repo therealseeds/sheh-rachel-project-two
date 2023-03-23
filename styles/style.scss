@@ -1,1 +1,50 @@
 @use "setup";
+@use "variables" as v;
+
+/*HEADER STYLES*/
+header {
+    background: url(./novas-project/assets/home.jpg);
+    height: 100vh;
+    padding-top: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+header .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 4rem;
+}
+
+h1 span {
+    font-weight: 700;
+    display: block;
+}
+
+nav ul {
+    display: flex;
+}  
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    background: #295196;
+    font-size: 1.75rem;
+    padding: 10px 40px 5px;
+    text-decoration: none;
+    display: inline-block;
+    border: 4px solid transparent;
+}
+
+nav a:hover,
+nav a:focus {
+    border: 4px solid white;
+}
