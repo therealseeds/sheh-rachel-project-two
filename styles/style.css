@@ -242,13 +242,12 @@ img {
   height: auto;
 }
 
-/* Not sure if I need this wrapper with these specific dimensions?
-.wrapper {
+/* Not sure if I need this wrapper with these specific dimensions?*/
+/*.wrapper {
     max-width: 1080px;
-    width: 90%;
+   width: 90%;
     margin: 0 auto;
-}
-*/
+}*/
 /* Heading Text = Poppins Medium 500
 
 Body Text = Poppins Regular 400
@@ -305,30 +304,42 @@ header .text-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  background: greenyellow;
+  margin: 100px;
+  height: 250px;
+  width: 250px;
 }
 
-nav,
-.featured-sale,
-footer {
+nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: lightcoral;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 h1 {
   text-align: left;
+  font-weight: 400;
 }
 
 h2 {
+  text-align: center;
+  font-weight: 400;
+}
+
+p {
   text-align: center;
 }
 
@@ -338,34 +349,103 @@ h2 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 33.3333333333%;
+  margin: 200px;
+}
+
+.vertical-items ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: greenyellow;
+}
+
+.vertical-items li {
+  margin: 10px;
 }
 
 .featured-sale {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 200px;
+}
+
+.featured-sale ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.featured-sale li {
   width: 20%;
+}
+
+button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 50%;
+  padding: 5px 20px;
 }
 
 .couches {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 50%;
+  margin: 200px;
+  background: greenyellow;
+}
+
+.couches ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.couches li {
+  height: 100%;
+  margin: 10px;
+}
+
+.instagram {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 200px;
+}
+
+.instagram ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.instagram li {
+  margin: 10px;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 200px;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /* Code I pulled from polar bear project to see what would help header

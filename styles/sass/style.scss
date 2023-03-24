@@ -23,46 +23,110 @@ header .wrapper {
 header .text-container {
     display: flex;
     flex-direction: column;
+    justify-content: left;
+    background: greenyellow;
+    margin: 100px;
+    height: 250px;
+    width: 250px;
 }
 
-nav,
-.featured-sale,
-footer  {
+nav {
     display: flex;
+    background: lightcoral;
+    justify-content: space-between
 }
 
 nav ul {
     display: flex;
-    justify-content: space-between;
-} 
+}
 
 h1 {
     text-align: left;
+    font-weight: 400;
 }
 
 h2 {
+    text-align: center;
+    font-weight: 400;
+}
+
+p {
     text-align: center;
 }
 
 .vertical-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    width: calc(100% / 3);
+    margin: 200px;
+}
+
+.vertical-items ul {
+    display: flex;
+    background: greenyellow;
+}
+
+.vertical-items li {
+    margin: 10px;
 }
 
 .featured-sale {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    margin: 200px;
+}
+
+.featured-sale ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.featured-sale li {
     width: calc(100% / 5);
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    margin: 0 50%;
+    padding: 5px 20px;
 }
 
 .couches {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    width: calc(100% / 2);
+    margin: 200px;
+    background: greenyellow;
+}
+
+.couches ul {
+    display: flex;
+}
+
+.couches li {
+    height: 100%;
+    margin: 10px;
+}
+
+.instagram {
+    display: flex;
+    margin: 200px;
+}
+
+.instagram ul {
+    display: flex;
+}
+
+.instagram li {
+    margin: 10px;
+}
+
+footer {
+    display: flex;
+    margin: 200px;
+}
+
+footer ul {
+    display: flex;
 }
 
 /* Code I pulled from polar bear project to see what would help header
