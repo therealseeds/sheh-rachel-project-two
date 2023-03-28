@@ -279,15 +279,29 @@ footer {
 }
 
 /*HEADER STYLES*/
+/*header {
+    background: url(../novas-project/assets/home.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.contact-header {
+        background: url(../novas-project/assets/contact.jpg);
+        background-repeat: no-repeat;
+    }
+}*/
 header {
   background: url(../novas-project/assets/home.jpg);
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
 }
-header.contact-header {
-  background: url(../novas-project/assets/contact.jpg);
+
+.contact.header {
+  background: url(../novas-project/assets/contact-us.jpg);
+  height: 100vh;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header .wrapper {
@@ -308,30 +322,44 @@ header .text-container {
       -ms-flex-pack: left;
           justify-content: left;
   background: greenyellow;
-  margin: 100px;
+  margin: 200px 0 0 200px;
   height: 250px;
   width: 250px;
 }
 
 nav {
+  text-transform: uppercase;
+  margin: 20px 0px 20px 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: lightcoral;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+nav li {
+  margin: 0 10px;
+  /*display: flex;
+  justify-content: space-between;*/
+}
+
+nav ul a {
+  text-decoration: none;
+  color: black;
 }
 
 h1 {
   text-align: left;
-  font-weight: 400;
+  font-weight: 500;
+  width: 100%;
 }
 
 header h2 {
@@ -341,6 +369,14 @@ header h2 {
 
 header p {
   text-align: left;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.section-title {
+  text-align: center;
+  font-weight: 400;
+  margin-top: 50px;
 }
 
 .vertical-items {
@@ -349,7 +385,7 @@ header p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 200px;
+  margin: 0 200px;
 }
 
 .vertical-items ul {
@@ -361,10 +397,8 @@ header p {
 
 .vertical-items li {
   margin: 10px;
-}
-
-.section-title {
-  text-align: center;
+  width: 33.3333333333%;
+  padding: 20px 10px 0;
 }
 
 .featured-sale {
@@ -374,7 +408,7 @@ header p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 200px;
+  margin: 10px 100px;
 }
 
 .featured-sale ul {
@@ -407,8 +441,8 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 200px;
   background: greenyellow;
+  margin: 20px 200px;
 }
 
 .couches ul {
@@ -426,7 +460,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 200px;
+  margin: 40px 200px 80px;
 }
 
 .instagram ul {
@@ -443,6 +477,16 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: white;
+  font-size: 16px;
+  background: #333;
+}
+
+footer .text-container {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  width: 250px;
 }
 
 footer .slogan ul {
@@ -457,6 +501,7 @@ footer .slogan ul {
 footer img {
   height: 20px;
   width: 20px;
+  margin: 0 5px 0 5px;
 }
 
 /* Code I pulled from polar bear project to see what would help header
