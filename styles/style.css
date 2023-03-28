@@ -297,11 +297,20 @@ header {
   background-size: cover;
 }
 
-.contact.header {
+.contact-header {
   background: url(../novas-project/assets/contact-us.jpg);
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: cover;
+}
+
+.contact-header h2 {
+  text-align: left;
+}
+
+fieldset {
+  border: none;
+  text-align: left;
+  max-width: 400px;
 }
 
 header .wrapper {
@@ -473,6 +482,10 @@ button {
   margin: 10px;
 }
 
+/*form{
+    text-align: left;
+  }*/
+/* Footer Styles*/
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
