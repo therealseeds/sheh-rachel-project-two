@@ -19,35 +19,16 @@ header {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+
+    img {
+        position: absolute;
+    }
 }
-
-.contact-header {
-    background: url(../novas-project/assets/contact-us.jpg);
-    height: 100vh;
-    background-repeat: no-repeat;
-}
-
-.contact-header h2 {
-    text-align: left;
-}
-
-fieldset{
-    border: none;
-    text-align: left;
-    max-width: 400px;
-  }
-
-header .wrapper {
-    max-width: 1080px;
-    width: 90%;
-    margin: 0 auto;
-}  
 
 header .text-container {
     display: flex;
     flex-direction: column;
     justify-content: left;
-    background: greenyellow;
     margin: 200px 0 0 200px;
     height: 250px;
     width: 250px;
@@ -55,8 +36,8 @@ header .text-container {
 
 nav {
     text-transform: uppercase; 
-    margin: 20px 0px 20px 50px;
     display: flex;
+    /*padding: 10px; why is this not working?!?*/
 }
 
 nav ul {
@@ -93,21 +74,25 @@ header p {
     line-height: 1.5;
 }
 
-.section-title {
+.index-h2 {
     text-align: center;
-    font-weight: 400;
-    margin-top: 50px;
+    font-weight: 300;
+}
+
+.index-p {
+    text-align: center;
+    color: grey;
 }
 
 .vertical-items {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 200px;
 }
 
 .vertical-items ul {
     display: flex;
-    background: greenyellow;
+    max-width: 100%;
+    height: 100vh;
 }
 
 .vertical-items li {
@@ -119,7 +104,7 @@ header p {
 .featured-sale {
     display: flex;
     justify-content: center;
-    margin: 10px 100px;
+    margin: 50px 100px;
 }
 
 .featured-sale ul {
@@ -131,17 +116,21 @@ header p {
     width: calc(100% / 5);
 }
 
-button {
+span {
     display: flex;
     justify-content: center;
-    margin: 0 50%;
-    padding: 5px 20px;
+}
+
+button {
+    background: white;
+    color: black;
+    border: 2px solid black;
+    padding: 5px 10px;
 }
 
 .couches {
     display: flex;
     justify-content: center;
-    background: greenyellow;
     margin: 20px 200px;
 }
 
@@ -167,9 +156,28 @@ button {
     margin: 10px;
 }
 
-/*form{
+  /* Contact Page Styles*/
+.contact-header {
+    background: url(../novas-project/assets/contact-us.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    max-width: 100%;
+}
+
+.contact-header h2 {
     text-align: left;
-  }*/
+    padding-top: 90px;
+}
+
+/* Contact Page*/
+fieldset{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    text-align: left;
+    max-width: 600px;
+  }
 
 /* Footer Styles*/
 
@@ -178,6 +186,7 @@ footer {
     color: white;
     font-size: 16px;
     background: #333;
+    justify-content: space-around;
 }
 
 footer .text-container {
@@ -189,60 +198,8 @@ footer .slogan ul {
     display: flex;
 }
 
-/*footer ul {
-    display: flex;
-}*/
-
 footer img {
     height: 20px;
     width: 20px;
     margin: 0 5px 0 5px;
 }
-
-/* Code I pulled from polar bear project to see what would help header
-
-header {   
-    padding-top: 50px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: white;
-}
-
-header .wrapper {
-    display: flex;
-    justify-content: space-between;
-}
-
-h1 {
-    font-weight: 500;
-    font-size: 4rem;
-}
-
-h1 span {
-    font-weight: 700;
-    display: block;
-}
-
-nav ul {
-    display: flex;
-}  
-
-nav li {
-    margin: 0 10px;
-}
-
-nav a {
-    color: white;
-    background: #295196;
-    font-size: 1.75rem;
-    padding: 10px 40px 5px;
-    text-decoration: none;
-    display: inline-block;
-    border: 4px solid transparent;
-}
-
-nav a:hover,
-nav a:focus {
-    border: 4px solid white;
-}
-*/

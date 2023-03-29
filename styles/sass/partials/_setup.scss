@@ -17,17 +17,18 @@ ul {
     list-style: none;
 }
 
-/*for responsive design, making sure image is never larger than the container*/
+.wrapper {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+/*for responsive design, making sure image is never larger than their parent element*/
 img {
     max-width: 100%;
     height: auto;
 }
 
-/* Not sure if I need this wrapper with these specific dimensions?*/
- /*.wrapper {
-    max-width: 1080px;
-   width: 90%;
-    margin: 0 auto;
-}*/
+
 
 
