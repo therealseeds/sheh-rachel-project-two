@@ -19,43 +19,77 @@ header {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    /*background-size: 100%;*/
 
-    img {
+    /*img {
         position: absolute;
+    }*/
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        /*margin: 200px 0 0 200px;*/
+        height: 250px;
+        width: 250px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
     }
 }
 
-header .text-container {
+/*header .text-container {
     display: flex;
     flex-direction: column;
     justify-content: left;
     margin: 200px 0 0 200px;
     height: 250px;
     width: 250px;
-}
+}*/
 
 nav {
-    text-transform: uppercase; 
+    text-transform: uppercase;
     display: flex;
+    margin: 0px;
     /*padding: 10px; why is this not working?!?*/
+
+    .nav-logo {
+        margin: 10px 0 10px 25px;
+    }
+
+    .nav-shopping-bag {
+        width: 100%;
+        height: 100%;
+        margin: 5px 0 10px 25px;
+        display: flex;
+        justify-content: flex-end;
+    }
 }
 
 nav ul {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin: 10px 0 10px 0;
+    background-color: palevioletred;
 
     li {
-    margin: 0 10px;
-    /*display: flex;
-    justify-content: space-between;*/
+        margin: 0 10px;
+        /*display: flex;
+        justify-content: space-between;*/
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
     }
 }
 
-nav ul a {
+/*nav ul a {
     text-decoration: none;
     color: black;
-}
+}*/
 
 h1 {
     text-align: left;
@@ -87,19 +121,31 @@ header p {
 .vertical-items {
     display: flex;
     flex-wrap: wrap;
+
+    ul {
+        display: flex;
+        max-width: 100%;
+        height: 100vh;
+
+        li {
+            margin: 10px;
+            width: calc(100% / 3);
+            padding: 20px 10px 0;
+        }
+    }
 }
 
-.vertical-items ul {
+/*.vertical-items ul {
     display: flex;
     max-width: 100%;
     height: 100vh;
-}
+}*/
 
-.vertical-items li {
+/*.vertical-items li {
     margin: 10px;
     width: calc(100% / 3);
     padding: 20px 10px 0;
-}
+}*/
 
 .featured-sale {
     display: flex;
@@ -156,7 +202,7 @@ button {
     margin: 10px;
 }
 
-  /* Contact Page Styles*/
+/* Contact Page Styles*/
 .contact-header {
     background: url(../novas-project/assets/contact-us.jpg);
     height: 100vh;
@@ -171,13 +217,13 @@ button {
 }
 
 /* Contact Page*/
-fieldset{
+fieldset {
     display: flex;
     flex-direction: column;
     border: none;
     text-align: left;
     max-width: 600px;
-  }
+}
 
 /* Footer Styles*/
 
@@ -187,19 +233,30 @@ footer {
     font-size: 16px;
     background: #333;
     justify-content: space-around;
-}
+    padding: 25px;
 
-footer .text-container {
-    justify-content: left;
-    width: 250px;
+    .text-container {
+        justify-content: left;
+        width: 250px;
+        margin: 10px 0 10px 0;
+        /*width: calc(25%);*/
+    }
+
+    img {
+        height: 20px;
+        width: 20px;
+        margin: 0 5px 0 5px;
+    }
 }
 
 footer .slogan ul {
     display: flex;
+    justify-content: flex-start;
+    background-color: palevioletred;
 }
 
-footer img {
-    height: 20px;
-    width: 20px;
-    margin: 0 5px 0 5px;
+footer .logo img {
+    width: calc(25% + 50px);
+    height: 100%;
+    margin: 0;
 }

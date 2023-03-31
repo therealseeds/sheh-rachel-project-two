@@ -295,11 +295,12 @@ header {
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  /*background-size: 100%;*/
+  /*img {
+      position: absolute;
+  }*/
 }
-header img {
-  position: absolute;
-}
-
 header .text-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -311,17 +312,43 @@ header .text-container {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  margin: 200px 0 0 200px;
+  /*margin: 200px 0 0 200px;*/
   height: 250px;
   width: 250px;
+  position: absolute;
+  top: 50px;
+  left: 50px;
 }
 
+/*header .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin: 200px 0 0 200px;
+    height: 250px;
+    width: 250px;
+}*/
 nav {
   text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin: 0px;
   /*padding: 10px; why is this not working?!?*/
+}
+nav .nav-logo {
+  margin: 10px 0 10px 25px;
+}
+nav .nav-shopping-bag {
+  width: 100%;
+  height: 100%;
+  margin: 5px 0 10px 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 nav ul {
@@ -332,19 +359,23 @@ nav ul {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  margin: 10px 0 10px 0;
+  background-color: palevioletred;
 }
-
-nav li {
+nav ul li {
   margin: 0 10px;
   /*display: flex;
   justify-content: space-between;*/
 }
-
 nav ul a {
   text-decoration: none;
   color: black;
 }
 
+/*nav ul a {
+    text-decoration: none;
+    color: black;
+}*/
 h1 {
   text-align: left;
   font-weight: 500;
@@ -379,7 +410,6 @@ header p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-
 .vertical-items ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -387,13 +417,22 @@ header p {
   max-width: 100%;
   height: 100vh;
 }
-
-.vertical-items li {
+.vertical-items ul li {
   margin: 10px;
   width: 33.3333333333%;
   padding: 20px 10px 0;
 }
 
+/*.vertical-items ul {
+    display: flex;
+    max-width: 100%;
+    height: 100vh;
+}*/
+/*.vertical-items li {
+    margin: 10px;
+    width: calc(100% / 3);
+    padding: 20px 10px 0;
+}*/
 .featured-sale {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -508,23 +547,34 @@ footer {
   background: #333;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding: 25px;
 }
-
 footer .text-container {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
   width: 250px;
+  margin: 10px 0 10px 0;
+  /*width: calc(25%);*/
+}
+footer img {
+  height: 20px;
+  width: 20px;
+  margin: 0 5px 0 5px;
 }
 
 footer .slogan ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  background-color: palevioletred;
 }
 
-footer img {
-  height: 20px;
-  width: 20px;
-  margin: 0 5px 0 5px;
+footer .logo img {
+  width: calc(25% + 50px);
+  height: 100%;
+  margin: 0;
 }
