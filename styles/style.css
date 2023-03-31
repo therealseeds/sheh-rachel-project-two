@@ -334,21 +334,22 @@ nav {
   display: -ms-flexbox;
   display: flex;
   margin: 0px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   /*padding: 10px; why is this not working?!?*/
 }
 nav .nav-logo {
   margin: 10px 0 10px 25px;
 }
 nav .nav-shopping-bag {
-  width: 100%;
+  /*width: 100%;*/
   height: 100%;
   margin: 5px 0 10px 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  /*justify-content: flex-end;*/
 }
 
 nav ul {
@@ -370,12 +371,10 @@ nav ul li {
 nav ul a {
   text-decoration: none;
   color: black;
+  /*hover:
+  focus: FIGURE OUT how to properly use these***/
 }
 
-/*nav ul a {
-    text-decoration: none;
-    color: black;
-}*/
 h1 {
   text-align: left;
   font-weight: 500;
@@ -423,16 +422,6 @@ header p {
   padding: 20px 10px 0;
 }
 
-/*.vertical-items ul {
-    display: flex;
-    max-width: 100%;
-    height: 100vh;
-}*/
-/*.vertical-items li {
-    margin: 10px;
-    width: calc(100% / 3);
-    padding: 20px 10px 0;
-}*/
 .featured-sale {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -480,14 +469,12 @@ button {
           justify-content: center;
   margin: 20px 200px;
 }
-
 .couches ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-
-.couches li {
+.couches ul li {
   height: 100%;
   margin: 10px;
 }
@@ -498,14 +485,12 @@ button {
   display: flex;
   margin: 40px 200px 80px;
 }
-
 .instagram ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-
-.instagram li {
+.instagram ul li {
   margin: 10px;
 }
 
@@ -523,8 +508,8 @@ button {
   padding-top: 90px;
 }
 
-/* Contact Page*/
-fieldset {
+/* Contact Page Form*/
+.contact-submission {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -532,9 +517,32 @@ fieldset {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: none;
+  /*border: none;*/
   text-align: left;
-  max-width: 600px;
+  max-width: 500px;
+  height: 100vh;
+  margin: 10px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.contact-submission input {
+  border: none;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
+}
+.contact-submission fieldset {
+  border: none;
+}
+.contact-submission textarea {
+  border: none;
+  border-bottom: 1px solid black;
+  margin-top: 10px;
+}
+.contact-submission button {
+  border: 1px solid black;
+  width: 100px;
+  margin-top: 30px;
 }
 
 /* Footer Styles*/
