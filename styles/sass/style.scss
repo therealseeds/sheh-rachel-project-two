@@ -112,6 +112,7 @@ header p {
     display: flex;
     flex-wrap: wrap;
     margin-left: calc(10%);
+    /*margin-left: 10px;*/
     margin-right: calc(10%);
     margin-top: 25px;
     margin-bottom: 0;
@@ -289,7 +290,7 @@ footer {
 }
 
 /* Media Queries*/
-/*@media (max-width: 1260px) {
+@media (max-width: 600px) {
     input[type="checkbox"] {
         display: block;
     }
@@ -303,11 +304,33 @@ input[type="checkbox"] {
     min-height: 60px;
     cursor: pointer;
     background: url(./icons/icons8-menu-60.png) center / cover no-repeat;
-}*/
+}
 
 @media (max-width: 600px) {
-    section {
-      /*flex-direction: column;*/
-      border: 1px solid black;
+    .vertical-items ul,
+    .featured-sale ul,
+    .couches ul,
+    .instagram ul {
+      flex-direction: column;
+      align-items: center;
+
+      li {
+        width: 100%;
+      }
     }
 }
+
+/*@media (max-width: 600px) {
+  input[type="checkbox"] {
+    display: block;
+  }
+  .vertical-items ul {
+    flex-direction: column;
+    align-items: center;
+    li {
+      width: 100%;
+      height: 100%;
+      border: 1px solid black;
+    }
+  }
+}*/
