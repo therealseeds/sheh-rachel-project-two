@@ -316,18 +316,11 @@ header .text-container {
   height: 250px;
   width: 250px;
   position: absolute;
-  top: 50px;
-  left: 50px;
+  top: 20%;
+  /*left: 100px;*/
+  left: 15%;
 }
 
-/*header .text-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    margin: 200px 0 0 200px;
-    height: 250px;
-    width: 250px;
-}*/
 nav {
   text-transform: uppercase;
   display: -webkit-box;
@@ -361,7 +354,6 @@ nav ul {
           justify-content: center;
   width: 100%;
   margin: 10px 0 10px 0;
-  background-color: palevioletred;
 }
 nav ul li {
   margin: 0 10px;
@@ -395,6 +387,7 @@ header p {
 .index-h2 {
   text-align: center;
   font-weight: 300;
+  margin: 10px;
 }
 
 .index-p {
@@ -408,6 +401,10 @@ header p {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 25px;
+  margin-bottom: 0;
 }
 .vertical-items ul {
   display: -webkit-box;
@@ -422,6 +419,10 @@ header p {
   padding: 20px 10px 0;
 }
 
+/*.furniture {
+    position: absolute;
+    top: 20px;
+}*/
 .featured-sale {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -431,7 +432,6 @@ header p {
           justify-content: center;
   margin: 50px 100px;
 }
-
 .featured-sale ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -439,9 +439,17 @@ header p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-
-.featured-sale li {
+.featured-sale ul li {
   width: 20%;
+  border: 1px solid rgb(234, 229, 229);
+}
+
+.image-container {
+  position: relative;
+}
+
+.absolute-text {
+  position: absolute;
 }
 
 span {
@@ -456,7 +464,7 @@ span {
 button {
   background: white;
   color: black;
-  border: 2px solid black;
+  border: 1px solid black;
   padding: 5px 10px;
 }
 
@@ -497,7 +505,7 @@ button {
 /* Contact Page Styles*/
 .contact-header {
   background: url(../novas-project/assets/contact-us.jpg);
-  height: 100vh;
+  height: 35vh;
   background-repeat: no-repeat;
   background-size: 100%;
   max-width: 100%;
@@ -505,7 +513,22 @@ button {
 
 .contact-header h2 {
   text-align: left;
-  padding-top: 90px;
+  /*padding: 20px 0 20px 0;*/
+  height: 100%;
+}
+
+.h2-height {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid black;
 }
 
 /* Contact Page Form*/
@@ -517,10 +540,9 @@ button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  /*border: none;*/
   text-align: left;
-  max-width: 500px;
-  height: 100vh;
+  max-width: 1000px;
+  /*height: 100vh;*/
   margin: 10px;
   appearance: none;
   -webkit-appearance: none;
@@ -530,9 +552,12 @@ button {
   border: none;
   border-bottom: 1px solid black;
   margin-top: 10px;
+  display: block;
+  width: 100%;
 }
 .contact-submission fieldset {
   border: none;
+  padding: 0;
 }
 .contact-submission textarea {
   border: none;
@@ -570,7 +595,6 @@ footer img {
   width: 20px;
   margin: 0 5px 0 5px;
 }
-
 footer .slogan ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -578,11 +602,27 @@ footer .slogan ul {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  background-color: palevioletred;
 }
-
 footer .logo img {
   width: calc(25% + 50px);
   height: 100%;
   margin: 0;
+}
+
+/* Media Queries*/
+@media (max-width: 1260px) {
+  input[type=checkbox] {
+    display: block;
+  }
+}
+input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
+  cursor: pointer;
+  background: url(./icons/icons8-menu-60.png) center/cover no-repeat;
 }
