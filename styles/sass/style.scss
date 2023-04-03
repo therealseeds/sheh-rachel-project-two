@@ -45,7 +45,7 @@ nav {
 
         p {
             font-size: 12px;
-            color: $darkergrey;
+            color: v.$darkergrey;
         }
     }
 }
@@ -95,7 +95,7 @@ header p {
 
 .index-p {
     text-align: center;
-    color: $lightgrey;
+    color: v.$lightgrey;
 }
 
 .vertical-items {
@@ -106,6 +106,14 @@ header p {
     margin-top: 25px;
     margin-bottom: 0;
     position: relative;
+
+    .vertical-items-text {
+        background-color: white;
+        color: v.$darkergrey;
+        position: absolute;
+        top: 280px;
+        padding: 5px;
+    }
 
     ul {
         display: flex;
@@ -127,12 +135,12 @@ header p {
     left: 200px;
 }*/
 
-.vertical-items-text p {
+/*.vertical-items-text {
     background-color: white;
     color: palevioletred;
     position: absolute;
     top: 20px;
-}
+}*/
 
 .featured-sale {
     display: flex;

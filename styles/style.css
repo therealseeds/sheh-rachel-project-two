@@ -254,6 +254,28 @@ img {
   height: auto;
 }
 
+/* From Style Guide:
+
+Heading Text = Poppins Medium 500
+
+Body Text = Poppins Regular 400
+
+50% Off = Poppins Bold 700
+*/
+html {
+  font-family: "Poppins", sans-serif;
+  font-size: 125%;
+}
+
+nav,
+main {
+  background: #fff;
+}
+
+footer {
+  background: #333;
+}
+
 /* Contact Page Styles*/
 .contact-header {
   background: url(../novas-project/assets/contact-us.jpg);
@@ -314,32 +336,6 @@ img {
   color: #333;
 }
 
-/* Heading Text = Poppins Medium 500
-
-Body Text = Poppins Regular 400
-
-50% Off = Poppins Bold 700
-
-#eba6aa; (pink for small things)
-
-#88cce2 (baby blue for small things)
-
-
-*/
-html {
-  font-family: "Poppins", sans-serif;
-  font-size: 125%;
-}
-
-nav,
-main {
-  background: #fff;
-}
-
-footer {
-  background: #333;
-}
-
 /*HEADER STYLES*/
 header {
   background: url(../novas-project/assets/home.jpg);
@@ -363,12 +359,10 @@ header .text-container {
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  /*margin: 200px 0 0 200px;*/
   height: 250px;
   width: 250px;
   position: absolute;
   top: 20%;
-  /*left: 100px;*/
   left: 15%;
 }
 
@@ -445,7 +439,7 @@ header p {
 
 .index-p {
   text-align: center;
-  color: grey;
+  color: #666;
 }
 
 .vertical-items {
@@ -455,17 +449,23 @@ header p {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-left: 10%;
-  /*margin-left: 10px;*/
   margin-right: 10%;
   margin-top: 25px;
   margin-bottom: 0;
+  position: relative;
+}
+.vertical-items .vertical-items-text {
+  background-color: white;
+  color: #333;
+  position: absolute;
+  top: 280px;
+  padding: 5px;
 }
 .vertical-items ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   max-width: 100%;
-  /*height: 100vh;*/
 }
 .vertical-items ul li {
   margin: 10px;
@@ -473,7 +473,16 @@ header p {
   padding: 20px 10px 0;
 }
 
-/*.furniture {
+/*p {
+    background-color: white;
+    color: pink;
+    position: absolute;
+    top: 50px;
+    left: 200px;
+}*/
+/*.vertical-items-text {
+    background-color: white;
+    color: palevioletred;
     position: absolute;
     top: 20px;
 }*/
