@@ -313,7 +313,7 @@ footer {
 }
 .contact-submission input {
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #333;
   margin-top: 10px;
   display: block;
   width: 100%;
@@ -324,12 +324,12 @@ footer {
 }
 .contact-submission textarea {
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #333;
   margin-top: 10px;
   width: 500px;
 }
 .contact-submission button {
-  border: 1px solid black;
+  border: 1px solid #333;
   width: 100px;
   margin-top: 30px;
   padding: 10px 20px 10px 20px;
