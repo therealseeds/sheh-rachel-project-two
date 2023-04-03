@@ -1,0 +1,50 @@
+/* Contact Page Styles*/
+.contact-header {
+    background: url(../novas-project/assets/contact-us.jpg);
+    height: 35vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    max-width: 100%;
+}
+
+.header-text-container {
+    height: 200px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+/* Contact Page Form*/
+.contact-submission {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    max-width: 500px;
+    margin: 100px 0 100px 0;
+
+    input {
+        border: none;
+        border-bottom: 1px solid black;
+        margin-top: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    fieldset {
+        border: none;
+        padding: 0;
+    }
+
+    textarea {
+        border: none;
+        border-bottom: 1px solid black;
+        margin-top: 10px;
+        width: 500px;
+    }
+
+    button {
+        border: 1px solid black;
+        width: 100px;
+        margin-top: 30px;
+    }
+}
