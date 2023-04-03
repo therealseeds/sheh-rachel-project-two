@@ -161,6 +161,26 @@ header p {
     }
 }
 
+.sale,
+.new {
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    position: relative;
+    top: -230px;
+    width: 25%;
+    text-align: center;
+    padding: 3px 0 3px 0;
+}
+
+.sale {
+    background: v.$pink;
+}
+
+.new {
+    background: v.$babyblue;
+}
+
 .sales-description {
     display: flex;
     font-size: 14px;
@@ -178,15 +198,6 @@ header p {
     margin: 0 10px 10px 0;
 }
 
-/*.image-container {
-    position: relative;
-}
-
-.absolute-text {
-    position: absolute;
-   /* top: 
-    left: */
-
 span {
     display: flex;
     justify-content: center;
@@ -194,9 +205,10 @@ span {
 
 button {
     background: white;
-    color: black;
-    border: 1px solid black;
-    padding: 5px 10px;
+    color: v.$darkergrey;
+    border: 1px solid v.$darkergrey;
+    padding: 15px 25px 10px 25px;
+    text-align: center;
 }
 
 .couches {
@@ -212,6 +224,36 @@ button {
             margin: 10px;
         }
     }
+}
+
+.sale-up-to {
+    position: relative;
+    top: -195px;
+    left: 125px;
+    text-transform: uppercase;
+    background: white;
+    color: v.$taupe;
+    width: 100px;
+    padding: 0 10px 0 10px;
+    font-size: 14px;
+}
+
+.fifty-percent-off {
+    position: relative;
+    top: -195px;
+    left: 70px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 10px;
+    font-size: 50px;
+}
+
+.shop-now {
+    position: relative;
+    top: -195px;
+    left: 125px;
+    color: white;
+    margin-top: 50px;
 }
 
 .instagram {
