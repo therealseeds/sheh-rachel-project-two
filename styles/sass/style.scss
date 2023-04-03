@@ -256,36 +256,46 @@ button {
     margin-top: 50px;
 }
 
-.get {
+.leather-loveseat {
     position: relative;
-    top: -365px;
-    right: -220px;
-    color: white;
-    font-size: 25px;
-}
+    border: 10px solid white;
+    background-color: palevioletred;
+    width: 100%;
+    display: block;
+    clear: right;
+    border-radius: 5px;
 
-.thirty-percent {
-    position: relative;
-    top: -390px;
-    right: -280px;
-    color: white;
-    font-size: 50px;
-}
+    .get {
+        position: absolute;
+        color: white;
+        font-size: 25px;
+        left: 220px;
+        top: -400px;
+    }
 
-.off {
-    position: relative;
-    top: -430px;
-    right: -340px;
-    color: white;
-    font-size: 25px;
-}
+    .thirty-percent {
+        position: absolute;
+        color: white;
+        font-size: 50px;
+        left: 280px;
+        top: -415px;
+    }
 
-.on-elisa {
-    position: relative;
-    top: -430px;
-    right: -175px;
-    color: white;
-    font-size: 25px;
+    .off {
+        position: absolute;
+        color: white;
+        font-size: 25px;
+        left: 400px;
+        top: -400px;
+    }
+
+    .on-elisa {
+        position: absolute;
+        color: white;
+        font-size: 25px;
+        left: 175px;
+        top: -330px;
+    }
 }
 
 .text-border {

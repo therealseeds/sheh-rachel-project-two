@@ -617,36 +617,42 @@ button {
   margin-top: 50px;
 }
 
-.get {
+.leather-loveseat {
   position: relative;
-  top: -365px;
-  right: -220px;
+  border: 10px solid white;
+  background-color: palevioletred;
+  width: 100%;
+  display: block;
+  clear: right;
+  border-radius: 5px;
+}
+.leather-loveseat .get {
+  position: absolute;
   color: white;
   font-size: 25px;
+  left: 220px;
+  top: -400px;
 }
-
-.thirty-percent {
-  position: relative;
-  top: -390px;
-  right: -280px;
+.leather-loveseat .thirty-percent {
+  position: absolute;
   color: white;
   font-size: 50px;
+  left: 280px;
+  top: -415px;
 }
-
-.off {
-  position: relative;
-  top: -430px;
-  right: -340px;
+.leather-loveseat .off {
+  position: absolute;
   color: white;
   font-size: 25px;
+  left: 400px;
+  top: -400px;
 }
-
-.on-elisa {
-  position: relative;
-  top: -430px;
-  right: -175px;
+.leather-loveseat .on-elisa {
+  position: absolute;
   color: white;
   font-size: 25px;
+  left: 175px;
+  top: -330px;
 }
 
 .text-border {
