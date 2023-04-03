@@ -343,10 +343,6 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  /*background-size: 100%;*/
-  /*img {
-      position: absolute;
-  }*/
 }
 header .text-container {
   display: -webkit-box;
@@ -364,6 +360,10 @@ header .text-container {
   position: absolute;
   top: 20%;
   left: 15%;
+  color: #333;
+}
+header p {
+  margin-top: 10px;
 }
 
 nav {
@@ -375,7 +375,12 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  /*padding: 10px; why is this not working?!?*/
+  color: #333;
+}
+nav .partial-underline {
+  border-bottom: 1px solid #333;
+  border-image-source: linear-gradient(to right, #333, white);
+  border-image-slice: 10;
 }
 nav .nav-logo {
   margin: 10px 0 10px 25px;
@@ -409,9 +414,9 @@ nav ul li {
 }
 nav ul a {
   text-decoration: none;
-  color: black;
+  color: #333;
   /*hover:
-  focus: FIGURE OUT how to properly use these***/
+  focus: FIGURE OUT how to properly use these**/
 }
 
 h1 {
@@ -429,6 +434,15 @@ header p {
   text-align: left;
   font-size: 12px;
   line-height: 1.5;
+}
+
+.featured-sale-title {
+  text-align: center;
+  font-weight: 300;
+  margin: 25px 0 40px 0;
+}
+.featured-sale-title h2 {
+  border-bottom: 2px solid #333; /*why no work?*/
 }
 
 .index-h2 {
@@ -458,8 +472,9 @@ header p {
   background-color: white;
   color: #333;
   position: absolute;
-  top: 280px;
-  padding: 5px;
+  top: 370px;
+  padding: 5px 10px 5px 5px;
+  font-size: 14px;
 }
 .vertical-items ul {
   display: -webkit-box;
@@ -473,19 +488,6 @@ header p {
   padding: 20px 10px 0;
 }
 
-/*p {
-    background-color: white;
-    color: pink;
-    position: absolute;
-    top: 50px;
-    left: 200px;
-}*/
-/*.vertical-items-text {
-    background-color: white;
-    color: palevioletred;
-    position: absolute;
-    top: 20px;
-}*/
 .featured-sale {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -503,20 +505,40 @@ header p {
       flex-wrap: wrap;
 }
 .featured-sale ul li {
-  width: 20%;
-  border: 1px solid rgb(234, 229, 229);
+  width: calc(20% - 1rem);
+  margin: 0.5rem;
+  border: 1px solid rgb(240, 233, 233);
 }
 
-.image-container {
-  position: relative;
+.sales-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.product-info-container {
+  margin-left: 10px;
+}
+
+.shopping-cart-container {
+  width: 25%;
+  height: 25%;
+  border: 1px solid rgb(240, 233, 233);
+  margin: 0 10px 10px 0;
+}
+
+/*.image-container {
+    position: relative;
 }
 
 .absolute-text {
-  position: absolute;
-  /* top: 
-   left: */
-}
-
+    position: absolute;
+   /* top: 
+    left: */
 span {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -540,7 +562,7 @@ button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 20px 200px;
+  margin: 20px 90px;
 }
 .couches ul {
   display: -webkit-box;
@@ -556,7 +578,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 40px 200px 80px;
+  margin: 40px 100px 80px;
 }
 .instagram ul {
   display: -webkit-box;
@@ -567,62 +589,6 @@ button {
   margin: 10px;
 }
 
-/* Contact Page Styles*/
-.contact-header {
-  background: url(../novas-project/assets/contact-us.jpg);
-  height: 35vh;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  max-width: 100%;
-}
-
-.header-text-container {
-  height: 200px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-/* Contact Page Form
-.contact-submission {
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    max-width: 500px;
-    margin: 100px 0 100px 0;
-
-    input {
-        border: none;
-        border-bottom: 1px solid black;
-        margin-top: 10px;
-        display: block;
-        width: 100%;
-    }
-
-    fieldset {
-        border: none;
-        padding: 0;
-    }
-
-    textarea {
-        border: none;
-        border-bottom: 1px solid black;
-        margin-top: 10px;
-        width: 500px;
-    }
-
-    button {
-        border: 1px solid black;
-        width: 100px;
-        margin-top: 30px;
-    }
-}*/
 /* Footer Styles*/
 footer {
   display: -webkit-box;
@@ -672,6 +638,7 @@ input {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
+  pointer-events: none;
 }
 
 /*.email-submission {
