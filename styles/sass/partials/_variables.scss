@@ -1,14 +1,10 @@
-/* Heading Text = Poppins Medium 500
+/* From Style Guide:
+
+Heading Text = Poppins Medium 500
 
 Body Text = Poppins Regular 400
 
 50% Off = Poppins Bold 700
-
-#eba6aa; (pink for small things)
-
-#88cce2 (baby blue for small things)
-
-
 */
 
 html {
@@ -27,3 +23,5 @@ footer {
 
 $lightgrey: #666;
 $darkergrey: #333;
+$pink: #eba6aa;
+$babyblue: #88cce2;
