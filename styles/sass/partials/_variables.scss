@@ -6,10 +6,6 @@ Body Text = Poppins Regular 400
 
 #eba6aa; (pink for small things)
 
-background: #333 (darker grey)
-
-#666 (light grey)
-
 #88cce2 (baby blue for small things)
 
 
@@ -28,3 +24,6 @@ main {
 footer {
     background: #333;
 }
+
+$lightgrey: #666;
+$darkergrey: #333;
