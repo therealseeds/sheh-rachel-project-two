@@ -1,11 +1,85 @@
 
+//Set up our FIREBASE database. This includes initializing our database and our dbRef.
 import app from "./firebase-config.js";
 import {getDatabase, ref, set, onValue} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
 const database = getDatabase(app);
 const dbRef = ref(database);
 
-//PSEUDOCODE DRAFT FOR PROJECT TWO
+//Declaring a function that will add our data, both the inventory and the currencies, to our database. We'll want to set up specific key names to go with our data as well.
+
+const addToDatabase = (key, value) => {
+
+  const customRef = ref(database, key);
+
+  set(customRef, value);
+
+}
+//Initial data set to Firebase (commented out after setup to avoid mistakenly pulling from it instead of pulling from Firebase)
+
+// const totalInventory = [
+//     {
+//     title: "Malm Chair",
+//     url: "./novas-project/assets/prod-1.jpg",
+//     price: 22.00,
+//   },
+//   {
+//     title: "Pendant Lamp",
+//     url: "./novas-project/assets/prod-2.jpg",
+//     price: 45.00,
+//   },
+//   {
+//     title: "Magnolia Dream",
+//     url: "./novas-project/assets/prod-3.jpg",
+//     price: 18.00,
+//   },
+//   {
+//     title: "Malm Chair",
+//     url: "./novas-project/assets/prod-4.jpg",
+//     price: 45.00,
+//   },
+//   {
+//     title: "Pendant Lamp",
+//     url: "./novas-project/assets/prod-5.jpg",
+//     price: 45.00,
+//   },
+//   {
+//     title: "Candle",
+//     url: "./novas-project/assets/prod-6.jpg",
+//     price: 45.00,
+//   },
+//   {
+//     title: "Lorem Ipsum",
+//     url: "./novas-project/assets/prod-7.jpg",
+//     price: 45.00,
+//   },
+//   {
+//     title: "Pendant Lamp",
+//     url: "./novas-project/assets/prod-8.jpg",
+//     price: 45.00,
+//   },
+//   {
+//     title: "Pendant Lamp",
+//     url: "./novas-project/assets/prod-9.jpg",
+//     price: 45.00,
+//   },
+//   {
+//     title: "Pendant Lamp",
+//     url: "./novas-project/assets/prod-10.jpg",
+//     price: 45.00,
+//   }
+// ]
+
+//Here we called our function to add our inventory data to Firebase, and then commented this out to prevent the console from thinking that totalInventory is not defined.
+
+//addToDatabase("inventory", totalInventory);
+
+// Step 4: Let's use the OnValue method to pull in our data from firebase - Don't forget to import it at the top of the page!
+
+
+
+
+//OVERALL PSEUDOCODE DRAFT FOR PROJECT TWO
 
 
 // IN BRIEF
@@ -91,69 +165,7 @@ const dbRef = ref(database);
 
 // search returns the product object of every product matching the search query
 
-// { "data": [
-//   {
-//     title: "Malm Chair",
-//     url: "images/bowie.jpg",
-//     price: 22,
-//     stock: 4,
-//   },
-//   {
-//     title: 'Pendant Lamp',
-//     url: 'images/doughnut.jpg',
-//     price: 45.00,
-//     stock: 5,
-//   },
-//   {
-//     title: 'Magnolia Dream',
-//     url: 'images/journey.jpg',
-//     price: 18.00,
-//     stock: 6
-//   },
-//   {
-//     title: 'Malm Chair',
-//     url: 'images/someurl.jpg',
-//     price: 45.00,
-//     stock: 0
-//   },
-//   {
-//     title: 'Pendant Lamp',
-//     url: 'images/skeleton.jpg',
-//     price: 45.00,
-//     stock: 10
-//   },
-//   {
-//     title: 'Candle',
-//     price: 45.00,
-//     stock: 4
-//   }
-//   {
-//     title: 'Lorem Ipsum',
-//     price: 45.00,
-//     stock: 4
-//   }
-//   {
-//     title: 'Pendant Lamp',
-//     price: 45.00,
-//     stock: 4
-//   }
-//   {
-//     title: 'Pendant Lamp',
-//     price: 45.00,
-//     stock: 4
-//   }
-//   {
-//     title: 'Pendant Lamp',
-//     price: 45.00,
-//     stock: 4
-//   }
-//   {
-//     title: 'Pendant Lamp',
-//     price: 45.00,
-//     stock: 4
-//   }
-// ]
-// }
+
 
 
 //ADDING JS FUNCTIONALIY FOR ASSIGNMENT #2
