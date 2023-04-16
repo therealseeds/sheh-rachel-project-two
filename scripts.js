@@ -74,7 +74,9 @@ const addToDatabase = (key, value) => {
 
 //addToDatabase("inventory", totalInventory);
 
-// Step 4: Let's use the OnValue method to pull in our data from firebase - Don't forget to import it at the top of the page!
+//Display the number of items currently added to the user's cart.
+
+//add onClick functionality to each shopping-cart-container image in the Featured Sale section
 
 
 
