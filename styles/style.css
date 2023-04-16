@@ -476,7 +476,7 @@ header p {
   background-color: white;
   color: #333;
   position: absolute;
-  top: 270px;
+  bottom: 20%;
   padding: 5px 10px 5px 5px;
   font-size: 14px;
 }
@@ -762,7 +762,7 @@ input {
     }
 }*/
 /* Media Queries*/
-@media (max-width: 600px) {
+@media (max-width: 960px) {
   input[type=checkbox] {
     display: block;
   }
@@ -779,7 +779,7 @@ input[type=checkbox] {
   background: url(/novas-project/assets/icons/icons8-menu-rounded-32.png) center/cover no-repeat;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 960px) {
   .vertical-items ul,
   .featured-sale ul,
   .couches ul,
