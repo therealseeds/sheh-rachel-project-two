@@ -21,11 +21,10 @@
 
 // search returns the product object of every product matching the search query
 
-//JSON structure
 { "data": [
     {
-      title: 'Malm Chair',
-      url: 'images/bowie.jpg',
+      title: "Malm Chair",
+      url: "images/bowie.jpg",
       price: 22,
       stock: 4,
     },
