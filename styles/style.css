@@ -512,6 +512,7 @@ header p {
   width: calc(20% - 1rem);
   margin: 0.5rem;
   border: 1px solid rgb(240, 233, 233);
+  position: relative;
 }
 
 .sale,
@@ -519,9 +520,9 @@ header p {
   text-transform: uppercase;
   color: white;
   font-size: 14px;
-  position: relative;
-  top: -230px;
-  width: 25%;
+  position: absolute;
+  top: 0px;
+  width: 50px;
   text-align: center;
   padding: 3px 0 3px 0;
 }
