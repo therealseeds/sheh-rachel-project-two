@@ -48,10 +48,14 @@ nav {
         height: 100%;
         margin: 5px 0 10px 25px;
         display: flex;
+        position: relative;
 
         p {
             font-size: 12px;
             color: v.$darkergrey;
+            position: absolute;
+            top: 0px;
+            right: 0px;
         }
     }
 }

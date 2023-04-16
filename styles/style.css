@@ -391,10 +391,14 @@ nav .nav-shopping-bag {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 nav .nav-shopping-bag p {
   font-size: 12px;
   color: #333;
+  position: absolute;
+  top: 0px;
+  right: 0px;
 }
 
 nav ul {
