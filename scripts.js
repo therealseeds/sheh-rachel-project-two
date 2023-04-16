@@ -74,17 +74,40 @@ const addToDatabase = (key, value) => {
 
 //addToDatabase("inventory", totalInventory);
 
-//Display the number of items currently added to the user's cart.
 
-//add onClick functionality to each shopping-cart-container image in the Featured Sale section
 
+
+//To display the number of items currently added to the user's cart:
+
+
+//grab each shopping-cart-container image (all of which have class = "buy-button") in the Featured Sale section with querySelector & add an event listener for click
+
+document.querySelector(".buy-button").addEventListener("click", function (e) {
+  if click = true;
+    numberOfItems = i++
+});
+
+//add onClick functionality to each image so that each time it's clicked, it posts to Firebase
+
+//how do we post this to Firebase?
+
+//save number of clicks as a variable
+
+const numberOfItems = //??
+
+//grab the <p> next to the shopping bag icon in the nav and make sure it's empty as a best practice
+
+const numberOfItems = document.querySelector(".number-in-cart");
+      numberOfItems.innerHTML = "";
+
+//now send numberOfClicks to that <p>
 
 
 
 //OVERALL PSEUDOCODE DRAFT FOR PROJECT TWO
 
 
-// IN BRIEF
+// IN BRIEF (from exercise we did in class that is semi-related)
 // Step 1: set up firebase
 // Step 2: get data onto firebase
 // Step 3: get data FROM firebase
@@ -115,6 +138,10 @@ const addToDatabase = (key, value) => {
 //// Create a file (firebase.js) to configure and export the Firebase object.
 
 // Import the database object, and any required Firebase modules at the top of the main app file (app.js)
+
+
+//...from example in notes
+
 
 // Use document.querySelector() to get three JS objects:
     // One that points to the UL where caught Pokemon will be displayed.
