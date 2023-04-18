@@ -74,41 +74,23 @@ const addToDatabase = (key, value) => {
 
 //addToDatabase("inventory", totalInventory);
 
-
-
-
 //To display the number of items currently added to the user's cart:
 
+//grab each shopping-cart-container image (all of which have class = "shopping-cart-container") in the Featured Sale section with querySelectorAll & add an event listener for click
 
-//grab each shopping-cart-container image (all of which have class = "shopping-cart-container") in the Featured Sale section with querySelector & add an event listener for click
+let numberOfItems = 0;
 
 const shoppingCart = document.querySelectorAll(".shopping-cart-container");
+for (let i = 0; i < shoppingCart.length; i++) {
+    shoppingCart[i].addEventListener("click", (e) => {
 
-console.log(shoppingCart);
+      numberOfItems = numberOfItems + 1;
+      
+      document.querySelector("#number-in-cart").innerHTML = numberOfItems; 
+    });
+}
 
-shoppingCart.addEventListener("click", (e) => {
-console.log("clicked");
-  
-  // if click = true;
-  //   numberOfItems = i++
-});
-
-//add onClick functionality to each image so that each time it's clicked, it posts to Firebase
-
-//how do we post this to Firebase?
-
-//save number of clicks as a variable
-
-// const numberOfItems = //??
-
-//grab the <p> next to the shopping bag icon in the nav and make sure it's empty as a best practice
-
-// const numberOfItems = document.querySelector(".number-in-cart");
-//       numberOfItems.innerHTML = "";
-
-//now send numberOfClicks to that <p>
-
-
+//Does this need to post to Firebase for the mandatory portion of the assignment?  Instructions don't indicate this I don't think?
 
 //OVERALL PSEUDOCODE DRAFT FOR PROJECT TWO
 
