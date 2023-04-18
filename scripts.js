@@ -86,7 +86,7 @@ const shoppingCart = document.querySelectorAll(".shopping-cart-container");
 
 console.log(shoppingCart);
 
-shoppingCart.addEventListener("click", function (e) {
+shoppingCart.addEventListener("click", (e) => {
 console.log("clicked");
   
   // if click = true;
