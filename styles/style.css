@@ -400,6 +400,30 @@ nav .nav-shopping-bag p {
   top: 0px;
   right: 0px;
 }
+nav .fa-solid {
+  display: block;
+  padding: 15px;
+  cursor: pointer;
+}
+nav .searchIcon {
+  position: fixed;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: black;
+}
+nav .showSearch {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
 
 nav ul {
   display: -webkit-box;

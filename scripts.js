@@ -228,3 +228,30 @@ const addToDatabase = (key, value) => {
 
 
 
+// Create onValue(?) to load current stock on page refresh
+// Create an event listener on the search button/field
+  const searchIcon = document.querySelector(".searchIcon");
+
+  function toggleSearch() {
+  if (searchIcon.classList.contains("showSearch")) {
+    searchIcon.classList.remove("showSearch");
+    searchBar.style.display = "none";
+
+  } else {
+
+    searchIcon.classList.add("showSearch");
+    searchBar.style.display = "block";
+}
+  }
+
+  searchIcon.addEventListener('click', toggleSearch);
+
+  
+
+
+
+    // Prevent the submit from causing the page to refresh (using the event.preventDefault() method).
+    // Get what the user wrote in the text input (using the .value property).
+// If search bar drop down - create html elements that append showing links to what the user has typed in the field
+// If we create separate search page that pops up
+  // create event listener for user clicking on search icon

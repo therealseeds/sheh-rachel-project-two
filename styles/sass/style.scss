@@ -56,7 +56,32 @@ nav {
             position: absolute;
             top: 0px;
             right: 0px;
+
+
+
         }
+    }
+
+    .fa-solid {
+        display: block;
+        padding: 15px;
+        cursor: pointer;
+    }
+
+    .searchIcon {
+        position: fixed;
+        transform: translateY(100%);
+        transition: transform 0.3s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        background: black;
+    }
+    
+    .showSearch {
+        transform: translateX(0);
     }
 }
 
