@@ -1,10 +1,10 @@
 
 //Set up our FIREBASE database. This includes initializing our database and our dbRef.
 import app from "./firebase-config.js";
-import {getDatabase, ref, set, onValue} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+import {getDatabase, ref, set, onValue, get, push} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
 const database = getDatabase(app);
-const dbRef = ref(database);
+const dbRef = ref(database, "/inventory");
 
 //Declaring a function that will add our data, both the inventory and the currencies, to our database. We'll want to set up specific key names to go with our data as well.
 
@@ -80,11 +80,17 @@ const addToDatabase = (key, value) => {
 //To display the number of items currently added to the user's cart:
 
 
-//grab each shopping-cart-container image (all of which have class = "buy-button") in the Featured Sale section with querySelector & add an event listener for click
+//grab each shopping-cart-container image (all of which have class = "shopping-cart-container") in the Featured Sale section with querySelector & add an event listener for click
 
-document.querySelector(".buy-button").addEventListener("click", function (e) {
-  if click = true;
-    numberOfItems = i++
+const shoppingCart = document.querySelectorAll(".shopping-cart-container");
+
+console.log(shoppingCart);
+
+shoppingCart.addEventListener("click", function (e) {
+console.log("clicked");
+  
+  // if click = true;
+  //   numberOfItems = i++
 });
 
 //add onClick functionality to each image so that each time it's clicked, it posts to Firebase
@@ -93,12 +99,12 @@ document.querySelector(".buy-button").addEventListener("click", function (e) {
 
 //save number of clicks as a variable
 
-const numberOfItems = //??
+// const numberOfItems = //??
 
 //grab the <p> next to the shopping bag icon in the nav and make sure it's empty as a best practice
 
-const numberOfItems = document.querySelector(".number-in-cart");
-      numberOfItems.innerHTML = "";
+// const numberOfItems = document.querySelector(".number-in-cart");
+//       numberOfItems.innerHTML = "";
 
 //now send numberOfClicks to that <p>
 
