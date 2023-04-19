@@ -33,6 +33,7 @@ nav {
     margin: 0px;
     justify-content: space-between;
     color: v.$darkergrey;
+    padding-bottom: 10px;
 
     .partial-underline {
         border-bottom: 1px solid v.$darkergrey;
@@ -63,25 +64,36 @@ nav {
     }
 
     .fa-solid {
-        display: block;
         padding: 15px;
         cursor: pointer;
     }
 
-    .searchIcon {
+    .searchBar {
         position: fixed;
-        transform: translateY(100%);
-        transition: transform 0.3s;
+        transform: translateX(100%);
+        transition: transform 0.7s;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
         z-index: 99;
-        background: black;
+        background: v.$darkergrey;
+        padding: 20px;
     }
     
     .showSearch {
         transform: translateX(0);
+    }
+
+    .icons {
+        position: fixed;
+        z-index: 100;
+        right: 25px;
+        padding: 4px;
+        padding-bottom: 0px;
+        background: white;
+        border: none;
+        cursor: pointer;
     }
 }
 
@@ -388,9 +400,7 @@ input {
     border-bottom: 1px solid black;
     margin: 10px 0 25px 0;
     display: block;
-    width: 100%;
     appearance: none;
-    pointer-events: none;
 }
 
 /*.email-submission {

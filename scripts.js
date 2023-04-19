@@ -228,25 +228,54 @@ const addToDatabase = (key, value) => {
 
 
 
-// Create onValue(?) to load current stock on page refresh
-// Create an event listener on the search button/field
-  const searchIcon = document.querySelector(".searchIcon");
+
+// Create an event listener on the search button/field that listens for a click and then when 
+  const icons = document.querySelector(".icons");
+  const searchBar = document.querySelector(".searchBar");
+  const searchIcon = document.querySelector(".fa-solid");
+  const closeIcon = document.querySelector(".fa-regular");
 
   function toggleSearch() {
-  if (searchIcon.classList.contains("showSearch")) {
-    searchIcon.classList.remove("showSearch");
-    searchBar.style.display = "none";
+  if (searchBar.classList.contains("showSearch")) {
+    searchBar.classList.remove("showSearch");
+    searchIcon.style.display = "block";
+    closeIcon.style.display = "none";
 
   } else {
 
-    searchIcon.classList.add("showSearch");
-    searchBar.style.display = "block";
-}
+    searchBar.classList.add("showSearch");
+    closeIcon.style.display = "block";
+    searchIcon.style.display = "none";
+
+    }
   }
 
-  searchIcon.addEventListener('click', toggleSearch);
+  icons.addEventListener('click', toggleSearch);
 
-  
+  // Need to create a function that takes the search input and displays results based on what they have typed
+  // Step one: grab the data set from firebase
+  // Step two: style the database to look like the gallery inventory on the home page
+  // Step three: connect the data set so that it filters based on what the user has entered in the search bar
+
+  onValue(dbRef, function(data) {
+
+    const ourData = data.val();
+    const searchInput = document.getElementById('search');
+    const inventory = ourData.inventory;
+      console.log(inventory);
+    
+      const searchResults = inventory.filter( (item) => {
+        return item.title === searchInput
+      });
+      console.log(searchResults);
+
+    // function searchProducts(){
+    //   let input = document.getElementById('search').value
+    //   input=input.toLowerCase();
+    // }
+
+
+  });
 
 
 
