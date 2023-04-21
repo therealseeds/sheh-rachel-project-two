@@ -257,30 +257,53 @@ const addToDatabase = (key, value) => {
   // Step two: style the database to look like the gallery inventory on the home page
   // Step three: connect the data set so that it filters based on what the user has entered in the search bar
 
-  onValue(dbRef, function(data) {
+    const submit = document.querySelector('.submit')
+    submit.addEventListener('click', (event) => {
+      event.preventDefault();
+      const userInput = document.getElementById('search').value
+      searchDatabase(userInput)
+    });
 
-    const ourData = data.val();
-    const searchInput = document.getElementById('search');
-    const inventory = ourData.inventory;
-      console.log(inventory);
+    const searchDatabase = (userInput) => {
+      onValue(dbRef, function(data) {
+
+        const ourData = data.val();
+        const inventory = ourData.inventory;
     
-      const searchResults = inventory.filter( (item) => {
-        return item.title === searchInput
-      });
-      console.log(searchResults);
+          const searchResults = inventory.filter((item) => {
+            return item.title.includes(userInput);
+        })
+        addSearchResults(searchResults)
+      })
+    }
 
-    // function searchProducts(){
-    //   let input = document.getElementById('search').value
-    //   input=input.toLowerCase();
-    // }
+    const addSearchResults = (searchResults) => {
+    searchResults.forEach((object) => {
+      console.log(object);
+            // Add the logic that would target .price .title .url and then append those items as list items and insert them into the empty UL 
+      // Variable that contains list item in backticks with written html and will add the html/css that I want and append that list item to the page 
+      // Add method to clear the searchresults on submit 
+      // Add case sensitivity 
+      })
+    }
 
 
-  });
+
+
+  
 
 
 
-    // Prevent the submit from causing the page to refresh (using the event.preventDefault() method).
-    // Get what the user wrote in the text input (using the .value property).
-// If search bar drop down - create html elements that append showing links to what the user has typed in the field
-// If we create separate search page that pops up
-  // create event listener for user clicking on search icon
+
+
+
+
+
+
+
+//     Prevent the submit from causing the page to refresh (using the event.preventDefault() method)?
+//     Get what the user wrote in the text input (using the .value property).
+// Create a filter for the array to be able to take out what we need from it - based on title
+// Connect that filter to the search input so that the results show only if they match the userInput 
+// append empty UL in index to populate with results based on what the user has entered 
+  // ** Make sure to put class on ul to transfer all css previously done on inventory objects on the home page so that they match 
