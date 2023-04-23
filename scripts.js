@@ -229,11 +229,12 @@ const addToDatabase = (key, value) => {
 
 
 
-// Create an event listener on the search button/field that listens for a click and then when 
+  // assignment of variables for pop out search window
   const icons = document.querySelector(".icons");
   const searchBar = document.querySelector(".searchBar");
   const searchIcon = document.querySelector(".fa-solid");
   const closeIcon = document.querySelector(".fa-regular");
+
 
   function toggleSearch() {
   if (searchBar.classList.contains("showSearch")) {
@@ -252,58 +253,88 @@ const addToDatabase = (key, value) => {
 
   icons.addEventListener('click', toggleSearch);
 
+
+    // created event listener that assigns the button to the variable of submit
+    const submit = document.querySelector('.submit')
+    // function that says - once the submit button is pushed on click then to then grab the value inside the element that has an id of 'search' (the search bar)
+    submit.addEventListener('click', (event) => {
+      // this prevents the default state of refreshing on click
+      event.preventDefault();
+      // this selects the value of what is entered in the search bar and is assigned to userInput variable 
+      const userInput = document.getElementById('search').value;
+      searchDatabase(userInput)
+
+      
+    });
+    // here we are passing the argument of userInput to the searchDatabase function by calling it above and creating the function that will filter through our results to find a matching title in our database
+    const searchDatabase = (userInput) => {
+      // line that references our database
+      onValue(dbRef, function(data) {
+        // adding a variable for the data value in our database
+        const ourData = data.val();
+        // assigned a variable to the specific array in our database
+        const inventory = ourData.inventory;
+        // filter that sorts through the inventory array and returns search results that match the item title based on the user input ALSO turns input into lowercase on return so that capitalization does not matter and removes any white space at the end of userinput using trim()
+          const searchResults = inventory.filter((item) => {
+            return item.title.includes(userInput.toLowerCase().trim())
+      
+        })
+        
+        // by passing the argument of search results by calling the function above, we can move the info from search results down to this function
+        addSearchResults(searchResults)
+        
+      })
+    }
+    // creating a function for adding search results to the page and passing it above to the function that filters and returns userinput. 
+    const addSearchResults = (searchResults) => {
+    searchResults.forEach((object) => {
+      // add a line of code that empties the ul every time to avoid duplication of results
+
+      // creating html elements so that we can append them to the ul 
+      const listItem = document.createElement('li');
+      const image = document.createElement('img');
+      const title = document.createElement('p');
+      const price = document.createElement('p');
+      // selecting each element and assigning it to the key value pair in the array on firebase
+      image.src = object.url
+      title.innerText = object.title
+      price.innerText = object.price
+      // appending those items to the li so that we can display them in the empty UL 
+      listItem.append(image, title, price);
+      document.querySelector('#results').append(listItem)
+      })
+    }
+
+
+    // TO DO: 
+    // Empty search bar after entering search results 
+    // Empty container before reloading with new results upon submit 
+    // possibly this code could be useful?       
+      // const ulElement = document.querySelector('#results');
+      // ulElement = '';
+    // UNSURE where to plug it in though - hasn't worked anywhere I thought to put it
+    // Make sure mobile version is readable 
+    // IF HAVE TIME - error handling, put in message that says "no results found"
+
+
+
+
+
+
+// ORIGINAL PSEUDOCODE
+
   // Need to create a function that takes the search input and displays results based on what they have typed
   // Step one: grab the data set from firebase
   // Step two: style the database to look like the gallery inventory on the home page
   // Step three: connect the data set so that it filters based on what the user has entered in the search bar
-
-    const submit = document.querySelector('.submit')
-    submit.addEventListener('click', (event) => {
-      event.preventDefault();
-      const userInput = document.getElementById('search').value
-      searchDatabase(userInput)
-    });
-
-    const searchDatabase = (userInput) => {
-      onValue(dbRef, function(data) {
-
-        const ourData = data.val();
-        const inventory = ourData.inventory;
-    
-          const searchResults = inventory.filter((item) => {
-            return item.title.includes(userInput);
-        })
-        addSearchResults(searchResults)
-      })
-    }
-
-    const addSearchResults = (searchResults) => {
-    searchResults.forEach((object) => {
-      console.log(object);
-            // Add the logic that would target .price .title .url and then append those items as list items and insert them into the empty UL 
-      // Variable that contains list item in backticks with written html and will add the html/css that I want and append that list item to the page 
-      // Add method to clear the searchresults on submit 
-      // Add case sensitivity 
-      })
-    }
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
 
 //     Prevent the submit from causing the page to refresh (using the event.preventDefault() method)?
 //     Get what the user wrote in the text input (using the .value property).
 // Create a filter for the array to be able to take out what we need from it - based on title
 // Connect that filter to the search input so that the results show only if they match the userInput 
 // append empty UL in index to populate with results based on what the user has entered 
-  // ** Make sure to put class on ul to transfer all css previously done on inventory objects on the home page so that they match 
+
+      // Add the logic that would target .price .title .url and then append those items as list items and insert them into the empty UL 
+      // Variable that contains list item in backticks with written html and will add the html/css that I want and append that list item to the page 
+      // Add method to clear the searchresults on submit 
+      // Add case sensitivity 

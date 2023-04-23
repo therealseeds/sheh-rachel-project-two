@@ -405,6 +405,10 @@ nav .fa-solid {
   padding: 15px;
   cursor: pointer;
 }
+nav .fa-regular {
+  display: none;
+  cursor: pointer;
+}
 nav .searchBar {
   position: fixed;
   -webkit-transform: translateX(100%);
@@ -418,7 +422,7 @@ nav .searchBar {
   right: 0;
   bottom: 0;
   z-index: 99;
-  background: #333;
+  background: white;
   padding: 20px;
 }
 nav .showSearch {
@@ -434,6 +438,18 @@ nav .icons {
   background: white;
   border: none;
   cursor: pointer;
+}
+
+.results li {
+  width: 100%;
+}
+
+.results img {
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 nav ul {

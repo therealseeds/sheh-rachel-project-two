@@ -58,13 +58,16 @@ nav {
             top: 0px;
             right: 0px;
 
-
-
         }
     }
 
     .fa-solid {
         padding: 15px;
+        cursor: pointer;
+    }
+
+    .fa-regular {
+        display: none;
         cursor: pointer;
     }
 
@@ -77,7 +80,7 @@ nav {
         right: 0;
         bottom: 0;
         z-index: 99;
-        background: v.$darkergrey;
+        background: white;
         padding: 20px;
     }
     
@@ -95,7 +98,21 @@ nav {
         border: none;
         cursor: pointer;
     }
+
 }
+
+
+
+.results li {
+    width: 100%;
+}
+
+.results img {
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
 
 nav ul {
     display: flex;
