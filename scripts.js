@@ -155,32 +155,35 @@ for (let i = 0; i < shoppingCart.length; i++) {
             // If not, add the new Pokemon to the list and set the logged catches to 1.
         // Use Firebase's update() function to send the updated list of Pokemon to Firebase (this will trigger the onValue() listener to update the page).
 
+//STRETCH GOAL
+
+// 1 - Allows users to view what has been added to their cart.
+
+//onClick on the ID assigned to the shopping cart icon in the nav, nav-shopping-bag, a modal pops up displaying the items they have added to their cart
+
+//code for adding items to our favorites
+//attach the event listener to the ul because the list items do not yet "exist" when we load the page
+nav-shopping-bag.addEventListener("click", (e) => {
+ 
+  if (e.target.tagName === "BUTTON") {
+  
+  //get the id attribute value from the list item and pass as an argument on the addToFavs function
+  addToFavs(e.target.parentElement.id)
+  //setAttribute takes 2 arguments: the attribute we're adding and its value
+  //with the disabled attribute, we can use an empty string as the value bc the present of the disabled attribute is considered true
+  e.target.setAttribute('disabled', '');
+  }
+});
+
+// 2 - Remove an item from the cart.
+
+//after a user has clicked on the shopping cart icon next to a product, that icon shows the number of that item in the cart
 
 
-        //DATA STRUCTURE FOR FIREBASE (PROJECT TWO)
+// 3 - See the total price of all items.
 
-// // Add all product data to Firebase (images, price, title, etc).
-
-// image:
-// price:
-// title:
-
-// //display the number of items currently added to the user's cart
-
-// set numbers of items current addred to the user's cart
-
-// // If we hit stretch goal we can then refactor data to include:
-// // Remove an item from the cart.
-
-// remove a product object from the cart
-
-// // See the total price of all items.
-
-
-
-// //Implement a search bar that allows users to search for products by name.
-
-// search returns the product object of every product matching the search query
+//where would this show in the UI?
+//in terms of the functionality
 
 
 
