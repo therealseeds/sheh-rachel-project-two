@@ -73,7 +73,7 @@ const addToDatabase = (key, value) => {
 //     price: 45.00,
 //   },
 //   {
-//     alt: "A lightbulb repurposed as a terrarium with a cactus growing inside of it"
+//     alt: "A lightbulb repurposed as a terrarium with a cactus growing inside of it."
 //     title: "Pendant Lamp",
 //     url: "./novas-project/assets/prod-10.jpg",
 //     price: 45.00,
