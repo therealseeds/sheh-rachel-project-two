@@ -19,51 +19,61 @@ const addToDatabase = (key, value) => {
 
 // const totalInventory = [
 //     {
+//     alt: "A pale green lounge chair."
 //     title: "Malm Chair",
 //     url: "./novas-project/assets/prod-1.jpg",
 //     price: 22.00,
 //   },
 //   {
+//     alt: "A pastel green folding side table."
 //     title: "Pendant Lamp",
 //     url: "./novas-project/assets/prod-2.jpg",
 //     price: 45.00,
 //   },
 //   {
+//     alt: "A pastel footstool."
 //     title: "Magnolia Dream",
 //     url: "./novas-project/assets/prod-3.jpg",
 //     price: 18.00,
 //   },
 //   {
+//     alt: "A grey lounge chair from the side."
 //     title: "Malm Chair",
 //     url: "./novas-project/assets/prod-4.jpg",
 //     price: 45.00,
 //   },
 //   {
+//     alt: "A white hanging lamp with gold trimming"
 //     title: "Pendant Lamp",
 //     url: "./novas-project/assets/prod-5.jpg",
 //     price: 45.00,
 //   },
 //   {
+//     alt: "A white throw pillow with decorative black lines."
 //     title: "Candle",
 //     url: "./novas-project/assets/prod-6.jpg",
 //     price: 45.00,
 //   },
 //   {
+//     alt: "A colorful throw blanket with fringe."
 //     title: "Lorem Ipsum",
 //     url: "./novas-project/assets/prod-7.jpg",
 //     price: 45.00,
 //   },
 //   {
+//     alt: "A wooden child's chair, designed to look like an elephant."
 //     title: "Pendant Lamp",
 //     url: "./novas-project/assets/prod-8.jpg",
 //     price: 45.00,
 //   },
 //   {
+//     alt: "A candle in a pink candleholder with pink lid."
 //     title: "Pendant Lamp",
 //     url: "./novas-project/assets/prod-9.jpg",
 //     price: 45.00,
 //   },
 //   {
+//     alt: "A lightbulb repurposed as a terrarium with a cactus growing inside of it."
 //     title: "Pendant Lamp",
 //     url: "./novas-project/assets/prod-10.jpg",
 //     price: 45.00,
