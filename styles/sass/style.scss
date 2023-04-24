@@ -33,6 +33,7 @@ nav {
     margin: 0px;
     justify-content: space-between;
     color: v.$darkergrey;
+    padding-bottom: 15px;
 
     .partial-underline {
         border-bottom: 1px solid v.$darkergrey;
@@ -58,6 +59,55 @@ nav {
             right: 0px;
         }
     }
+
+    .fa-regular {
+        cursor: pointer;
+        display: none;
+    }
+    
+    .fa-solid {
+        padding: 15px;
+        cursor: pointer;
+    }
+    
+    .searchBar {
+        position: fixed;
+        transform: translateX(100%);
+        transition: transform 0.7s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        background: white;
+        padding: 20px;
+    }
+    
+    .showSearch {
+        transform: translateX(0);
+    }
+    
+    .icons {
+        position: fixed;
+        z-index: 100;
+        right: 25px;
+        padding: 4px;
+        padding-bottom: 0px;
+        background: white;
+        border: none;
+        cursor: pointer;
+    }
+}
+
+
+.results li {
+    width: 100%;
+}
+
+.results img {
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
 }
 
 nav ul {
@@ -363,9 +413,6 @@ input {
     border-bottom: 1px solid black;
     margin: 10px 0 25px 0;
     display: block;
-    width: 100%;
-    appearance: none;
-    pointer-events: none;
 }
 
 /*.email-submission {
