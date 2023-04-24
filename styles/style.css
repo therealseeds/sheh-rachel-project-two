@@ -376,6 +376,7 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: #333;
+  padding-bottom: 10px;
 }
 nav .partial-underline {
   border-bottom: 1px solid #333;
@@ -399,6 +400,56 @@ nav .nav-shopping-bag p {
   position: absolute;
   top: 0px;
   right: 0px;
+}
+nav .fa-solid {
+  padding: 15px;
+  cursor: pointer;
+}
+nav .fa-regular {
+  display: none;
+  cursor: pointer;
+}
+nav .searchBar {
+  position: fixed;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.7s;
+  transition: -webkit-transform 0.7s;
+  transition: transform 0.7s;
+  transition: transform 0.7s, -webkit-transform 0.7s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: white;
+  padding: 20px;
+}
+nav .showSearch {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+nav .icons {
+  position: fixed;
+  z-index: 100;
+  right: 25px;
+  padding: 4px;
+  padding-bottom: 0px;
+  background: white;
+  border: none;
+  cursor: pointer;
+}
+
+.results li {
+  width: 100%;
+}
+
+.results img {
+  height: 500px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 nav ul {
@@ -726,11 +777,9 @@ input {
   border-bottom: 1px solid black;
   margin: 10px 0 25px 0;
   display: block;
-  width: 100%;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  pointer-events: none;
 }
 
 /*.email-submission {
