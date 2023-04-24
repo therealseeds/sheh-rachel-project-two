@@ -6,6 +6,9 @@ import {getDatabase, ref, set,} from "https://www.gstatic.com/firebasejs/9.19.1/
 const database = getDatabase(app);
 const dbRef = ref(database, "/inventory");
 
+//reference to what's been added to cart in Firebase
+const cartRef = ref(database, "/addedToCart")
+
 //Declaring a function that will add our data, both the inventory and the currencies, to our database. We'll want to set up specific key names to go with our data as well.
 
 const addToDatabase = (key, value) => {
@@ -72,12 +75,7 @@ const addToDatabase = (key, value) => {
 
 //Here we called our function to add our inventory data to Firebase, and then commented this out to prevent the console from thinking that totalInventory is not defined.
 
-//addToDatabase("inventory", totalInventory);
-
-//To display the number of items currently added to the user's cart:
-
-//grab each shopping-cart-container image (all of which have class = "shopping-cart-container") in the Featured Sale section with querySelectorAll & add an event listener for click
-
+//Dynamically changing the number of items in cart
 let numberOfItems = 0;
 
 const shoppingCart = document.querySelectorAll(".shopping-cart-container");
@@ -92,18 +90,40 @@ for (let i = 0; i < shoppingCart.length; i++) {
 
 //Does this need to post to Firebase for the mandatory portion of the assignment?  Instructions don't indicate this I don't think?
 
-//OVERALL PSEUDOCODE DRAFT FOR PROJECT TWO
+//STRETCH GOAL
+
+// 1 - Allows users to view what has been added to their cart.
+
+//refactor the above code to dynamically change the number of items in the cart so that those selected products are also being sent to the database via the cartRef variable established above
+
+//add an event listener for a click on viewCart (which is to say a click on the shopping cart icon in the nav) so that when clicked a modal pops up displaying the items they have added to their cart
+
+let viewCart = document.querySelector(".nav-shopping-bag");
+
+viewCart.addEventListener("click", (e) => {
+ 
+  if (e.target.tagName === "BUTTON") {
+  
+  //get the id attribute value from the list item and pass as an argument on the addToFavs function
+  addToFavs(e.target.parentElement.id)
+  //setAttribute takes 2 arguments: the attribute we're adding and its value
+  //with the disabled attribute, we can use an empty string as the value bc the present of the disabled attribute is considered true
+  e.target.setAttribute('disabled', '');
+  }
+});
+
+// 2 - Remove an item from the cart.
+
+//
 
 
-// IN BRIEF (from exercise we did in class that is semi-related)
-// Step 1: set up firebase
-// Step 2: get data onto firebase
-// Step 3: get data FROM firebase
-// Step 4: filter data to remove out of stock and no image products
-// Step 5: display products on the page
+// 3 - See the total price of all items.
+
+//where would this show in the UI?
+//in terms of the functionality
 
 
-// IN GREATER DETAIL
+// OVERALL PSEUDOCODE 
 
 //SHEH'S DRAFT
 // Create a file (firebase.js) to configure and export the Firebase object.
@@ -154,39 +174,6 @@ for (let i = 0; i < shoppingCart.length; i++) {
             // If the Pokemon the user entered is already in the list, add one to the number of logged catches (using ++, the increment operator).
             // If not, add the new Pokemon to the list and set the logged catches to 1.
         // Use Firebase's update() function to send the updated list of Pokemon to Firebase (this will trigger the onValue() listener to update the page).
-
-//STRETCH GOAL
-
-// 1 - Allows users to view what has been added to their cart.
-
-//onClick on the ID assigned to the shopping cart icon in the nav, nav-shopping-bag, a modal pops up displaying the items they have added to their cart
-
-//code for adding items to our favorites
-//attach the event listener to the ul because the list items do not yet "exist" when we load the page
-nav-shopping-bag.addEventListener("click", (e) => {
- 
-  if (e.target.tagName === "BUTTON") {
-  
-  //get the id attribute value from the list item and pass as an argument on the addToFavs function
-  addToFavs(e.target.parentElement.id)
-  //setAttribute takes 2 arguments: the attribute we're adding and its value
-  //with the disabled attribute, we can use an empty string as the value bc the present of the disabled attribute is considered true
-  e.target.setAttribute('disabled', '');
-  }
-});
-
-// 2 - Remove an item from the cart.
-
-//after a user has clicked on the shopping cart icon next to a product, that icon shows the number of that item in the cart
-
-
-// 3 - See the total price of all items.
-
-//where would this show in the UI?
-//in terms of the functionality
-
-
-
 
 //ADDING JS FUNCTIONALIY FOR ASSIGNMENT #2
         // //find the form element on the page
