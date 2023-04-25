@@ -388,14 +388,14 @@ nav .nav-logo {
 }
 nav .nav-shopping-bag {
   height: 100%;
-  margin: 5px 0 10px 25px;
+  margin: 12px 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
 }
 nav .nav-shopping-bag p {
-  font-size: 12px;
+  font-size: 15px;
   color: #333;
   position: absolute;
   top: 0px;
