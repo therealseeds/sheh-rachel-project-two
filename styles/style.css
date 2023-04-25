@@ -773,7 +773,10 @@ footer .logo img {
   height: 100%;
   margin: 0;
 }
-
+footer a {
+  text-decoration: none;
+  color: rgb(240, 233, 233);
+}
 input {
   border: none;
   border-bottom: 1px solid black;
