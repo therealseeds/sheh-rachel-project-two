@@ -1,10 +1,10 @@
 
 //Set up our FIREBASE database. This includes initializing our database and our dbRef.
 import app from "./firebase-config.js";
-import {getDatabase, ref, set, onValue} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+import {getDatabase, ref, set,} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
 const database = getDatabase(app);
-const dbRef = ref(database);
+const dbRef = ref(database, "/inventory");
 
 //Declaring a function that will add our data, both the inventory and the currencies, to our database. We'll want to set up specific key names to go with our data as well.
 
@@ -84,15 +84,28 @@ const addToDatabase = (key, value) => {
 
 //addToDatabase("inventory", totalInventory);
 
-// Step 4: Let's use the OnValue method to pull in our data from firebase - Don't forget to import it at the top of the page!
+//To display the number of items currently added to the user's cart:
 
+//grab each shopping-cart-container image (all of which have class = "shopping-cart-container") in the Featured Sale section with querySelectorAll & add an event listener for click
 
+let numberOfItems = 0;
 
+const shoppingCart = document.querySelectorAll(".shopping-cart-container");
+for (let i = 0; i < shoppingCart.length; i++) {
+    shoppingCart[i].addEventListener("click", (e) => {
+
+      numberOfItems = numberOfItems + 1;
+      
+      document.querySelector("#number-in-cart").innerHTML = numberOfItems; 
+    });
+}
+
+//Does this need to post to Firebase for the mandatory portion of the assignment?  Instructions don't indicate this I don't think?
 
 //OVERALL PSEUDOCODE DRAFT FOR PROJECT TWO
 
 
-// IN BRIEF
+// IN BRIEF (from exercise we did in class that is semi-related)
 // Step 1: set up firebase
 // Step 2: get data onto firebase
 // Step 3: get data FROM firebase
@@ -123,6 +136,10 @@ const addToDatabase = (key, value) => {
 //// Create a file (firebase.js) to configure and export the Firebase object.
 
 // Import the database object, and any required Firebase modules at the top of the main app file (app.js)
+
+
+//...from example in notes
+
 
 // Use document.querySelector() to get three JS objects:
     // One that points to the UL where caught Pokemon will be displayed.
