@@ -396,6 +396,7 @@ nav .nav-shopping-bag {
 }
 nav .nav-shopping-bag p {
   font-size: 15px;
+  font-weight: bold;
   color: #333;
   position: absolute;
   top: 0px;
