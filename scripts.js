@@ -4,7 +4,7 @@ import app from "./firebase-config.js";
 import {getDatabase, ref, set, onValue} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
 const database = getDatabase(app);
-const dbRef = ref(database, "/inventory");
+const dbRef = ref(database);
 
 //Declaring a function that will add our data, both the inventory and the currencies, to our database. We'll want to set up specific key names to go with our data as well.
 
@@ -12,7 +12,7 @@ const addToDatabase = (key, value) => {
 
   const customRef = ref(database, key);
 
-  set(customRef, value);
+  set(customRef, value, onValue);
 
 }
 //Initial data set to Firebase (commented out after setup to avoid mistakenly pulling from it instead of pulling from Firebase)
