@@ -430,14 +430,13 @@ nav .showSearch {
           transform: translateX(0);
 }
 nav .icons {
-  position: fixed;
+  color: #333;
   z-index: 100;
-  right: 25px;
-  padding: 4px;
   padding-bottom: 0px;
-  background: white;
+  padding-top: 0px;
   border: none;
   cursor: pointer;
+  height: 100%;
 }
 
 .results li {
