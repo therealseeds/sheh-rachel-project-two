@@ -643,10 +643,14 @@ button {
   margin: 10px;
 }
 
-.sale-up-to {
+.couch-sale {
   position: relative;
-  top: -195px;
-  left: 125px;
+}
+
+.sale-up-to {
+  position: absolute;
+  top: 52%;
+  left: 40%;
   text-transform: uppercase;
   background: white;
   color: #d7b89c;
@@ -656,9 +660,9 @@ button {
 }
 
 .fifty-percent-off {
-  position: relative;
-  top: -195px;
-  left: 70px;
+  position: absolute;
+  top: 55%;
+  left: 30%;
   text-transform: uppercase;
   color: white;
   margin-top: 10px;
@@ -666,17 +670,15 @@ button {
 }
 
 .shop-now {
-  position: relative;
-  top: -195px;
-  left: 125px;
+  position: absolute;
+  top: 58%;
+  left: 40%;
   color: white;
   margin-top: 50px;
 }
 
 .leather-loveseat {
   position: relative;
-  border: 10px solid white;
-  background-color: palevioletred;
   width: 100%;
   display: block;
   clear: right;
@@ -686,29 +688,29 @@ button {
   position: absolute;
   color: white;
   font-size: 25px;
-  left: 220px;
-  top: -400px;
+  left: 30%;
+  top: 35%;
 }
 .leather-loveseat .thirty-percent {
   position: absolute;
   color: white;
   font-size: 50px;
-  left: 280px;
-  top: -415px;
+  left: 40%;
+  top: 30%;
 }
 .leather-loveseat .off {
   position: absolute;
   color: white;
   font-size: 25px;
-  left: 400px;
-  top: -400px;
+  left: 60%;
+  top: 35%;
 }
 .leather-loveseat .on-elisa {
   position: absolute;
   color: white;
   font-size: 25px;
-  left: 175px;
-  top: -330px;
+  left: 25%;
+  top: 45%;
 }
 
 .text-border {
