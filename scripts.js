@@ -1,7 +1,7 @@
 
 //Set up our FIREBASE database. This includes initializing our database and our dbRef.
 import app from "./firebase-config.js";
-import {getDatabase, ref, set,} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+import {getDatabase, ref, set, onValue} from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
 
 const database = getDatabase(app);
 const dbRef = ref(database, "/inventory");
